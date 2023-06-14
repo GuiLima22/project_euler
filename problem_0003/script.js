@@ -1,26 +1,28 @@
-const a = 10000
-let i = 0
-let i2 = 0
-let arr = []
-const newArr = []
-const b = 600851475143;
+function calcFactors(number){
+    let i = 0
+    const b = Math.round(Math.sqrt(number))
+    const arr = []
 
-
-while(i < a){
-    i++;
-    while(i2 < a){
-        i2++;
-        if(i % i2 == 0){
-            arr.push(i2)
+    while(i < b){
+        i++
+        if(number % i == 0){
+            const factor1 = i
+            const factor2 = number / factor1
+            arr.push(factor1, factor2)
         }
     }
-    if(arr.length === 2 && b % arr[1] == 0){
-        newArr.push(arr[1])
-    }
-    i2 = 0
-    arr = []
+    return arr
+
 }
 
+const arr = calcFactors(600851475143).sort(function(a, b){return a-b})
+const newArr = []
+for (n in arr){
+    if(calcFactors(arr[n]).length == 2){
+        newArr.push(arr[n])
+    }
+}
 
+const LastPrime = (newArr.length) - 1
 
-console.log(newArr)
+console.log(newArr[LastPrime])
