@@ -16,13 +16,17 @@ while (i1 < 999){
         const mult = (i1 * i2).toString()
         const reverseMult = reverseString(mult)
         if(mult == reverseMult){
-            console.log(mult)
-            arr.push(mult)
+            let toNumMult = parseInt(mult)
+            if(!arr.includes(toNumMult)){
+                arr.push(toNumMult)
+            }
         }
     }
     i2 = 99
 }
 
-const lastElement = (arr.length) - 1
+let ascendingArr = arr.sort(function(a, b){return a-b});
 
-console.log(parseInt(arr[lastElement]))
+const lastElement = (ascendingArr.length) - 1
+
+console.log(ascendingArr)
