@@ -11,11 +11,11 @@ while(i < 10){
     divisors.push(i)
 };
 
-i = 0
-
 console.log(divisors)
 
-while(i > -1){
+i = 0
+
+/*while(i > -1){
     i += 2
     for (const divisor in divisors){
         const quocient = round(i / divisors[divisor])
@@ -24,9 +24,23 @@ while(i > -1){
         }
     }
     if (arr.length == divisors.length){
-        console.log(i);
         break;
     }
 
     arr = []
+}*/
+
+for (const divisor in divisors){
+    if(2520 % divisors[divisor] != 0){
+        let a = false
+    }
+    else{
+        a = true
+    }
 }
+
+while(a == true){
+    
+}
+
+arr = []
