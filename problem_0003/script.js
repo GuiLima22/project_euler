@@ -17,7 +17,7 @@ function calcFactors(number){
 
 const arr = calcFactors(600851475143).sort(function(a, b){return a-b})
 const newArr = []
-for (n in arr){
+for (const n in arr){
     if(calcFactors(arr[n]).length == 2){
         newArr.push(arr[n])
     }

@@ -29,4 +29,4 @@ let ascendingArr = arr.sort(function(a, b){return a-b});
 
 const lastElement = (ascendingArr.length) - 1
 
-console.log(ascendingArr)
+console.log(ascendingArr[lastElement])
