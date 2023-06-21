@@ -1,9 +1,9 @@
 function calcFactors(number){
     let i = 0
-    const b = Math.round(Math.sqrt(number))
+    const numSqrt = Math.round(Math.sqrt(number))
     const arr = []
 
-    while(i < b){
+    while(i < numSqrt){
         i++
         if(number % i == 0){
             const factor1 = i
