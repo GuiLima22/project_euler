@@ -13,30 +13,32 @@ function calcFactors(number) {
             const factor1 = i;
             const factor2 = number / i;
 
-            arr.push(factor1, factor2);
+            if(factor1 == factor2){
+                arr.push(factor1)
+            }else{
+                 arr.push(factor1, factor2);
+            }
         }
     }
 
-    return arr
+    return arr.sort(function(a, b){return a-b});
 }
 
 function calcPrimeOfPosition(number) {
     let i = 0;
-    const primeNumsArr = [];
-    const desiredNum = number;
-    const maxNum = desiredNum + 1;
+    const primeNumArr = [];
 
 
-    while (primeNumsArr.length < maxNum) {
+    while (primeNumArr.length < number) {
         i++;
         if (calcFactors(i).length == 2) {
-            primeNumsArr.push(i);
+            primeNumArr.push(i);
         }
     }
 
-    const lastNum = primeNumsArr.length - 1;
+    const lastNum = primeNumArr.length - 1;
 
-    return console.log(primeNumsArr[lastNum]);
+    return console.log(primeNumArr[lastNum]);
 }
 
-calcPrimeOfPosition(10001);
+calcPrimeOfPosition(6);
