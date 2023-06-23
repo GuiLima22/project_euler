@@ -9,11 +9,9 @@ const divisors = [];
 while(i < 20){
     i++
     divisors.push(i)
-};
+}
 
-console.log(divisors)
-
-i = 0
+i = 0;
 
 while(true){
     i += 2520
@@ -29,5 +27,6 @@ while(true){
 
     arr = []
 }
-console.log(arr)
-console.log(i)
+
+
+console.log(i);
