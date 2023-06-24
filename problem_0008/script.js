@@ -22,5 +22,4 @@ function multNumCharacters(string, gap) {
     console.log(numSliced)
 }
 
-multNumCharacters(a, 4);
 multNumCharacters(a, 13);
