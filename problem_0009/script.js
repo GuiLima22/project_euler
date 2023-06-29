@@ -1,13 +1,22 @@
-function round(number) {
-    return Math.round(number * 100) / 100
-}
-
-function sqrt(number) {
-    Math.sqrt(number)
-}
-
 let a = 1
 let b = 1
+const max = 1000
+
+while(a < max){
+    a++;
+    b = a;
+    while(b < max){
+        b++;
+        if(Math.sqrt(a**2 + b** 2) == max - a - b){
+            console.log((max - a - b) * a * b);
+            break;
+        }
+    }
+    if(Math.sqrt(a**2 + b** 2) == max - a - b){
+        break;
+    }
+}
+
 // let c = 1
 
 // while(a < 1000){
@@ -32,4 +41,3 @@ let b = 1
 //         break;
 //     }
 // }
-
