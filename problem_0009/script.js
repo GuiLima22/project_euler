@@ -2,17 +2,17 @@ let a = 1
 let b = 1
 const max = 1000
 
-while(a < max){
+while (a < max) {
     a++;
     b = a;
-    while(b < max){
+    while (b < max) {
         b++;
-        if(Math.sqrt(a**2 + b** 2) == max - a - b){
-            console.log((max - a - b) * a * b);
+        if (Math.sqrt(a ** 2 + b ** 2) == max - (a + b)) {
+            console.log((max - (a + b)) * a * b);
             break;
         }
     }
-    if(Math.sqrt(a**2 + b** 2) == max - a - b){
+    if (Math.sqrt(a ** 2 + b ** 2) == max - (a + b)) {
         break;
     }
 }
