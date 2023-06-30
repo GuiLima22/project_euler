@@ -1,19 +1,18 @@
-let a = 1
-let b = 1
-const max = 1000
+let a = 1;
+let b = 1;
+let foundSolution = true
+const max = 1000;
 
-while (a < max) {
+
+while (a < max && foundSolution) {
     a++;
     b = a;
     while (b < max) {
         b++;
         if (Math.sqrt(a ** 2 + b ** 2) == max - (a + b)) {
             console.log((max - (a + b)) * a * b);
-            break;
+            foundSolution = false
         }
-    }
-    if (Math.sqrt(a ** 2 + b ** 2) == max - (a + b)) {
-        break;
     }
 }
 
