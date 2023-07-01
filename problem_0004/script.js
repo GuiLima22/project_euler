@@ -1,32 +1,36 @@
-function reverseString(string){
+import misc from "../misc/misc.js";
+
+function reverseString(string) {
     const splitString = string.split('');
     const reverseSplit = splitString.reverse();
     const joinArr = reverseSplit.join('');
+
     return joinArr
 }
 
-let i1 = 99
-let i2 = 99
-const arr = []
+function findHigherPalindromeUntil(number) {
+    const a = ((number - 9) / 10);
+    let x = a;
+    let y = a;
+    let higher = 0;
 
-while (i1 < 999){
-    i1++
-    while (i2 < 999){
-        i2++
-        const mult = (i1 * i2).toString()
-        const reverseMult = reverseString(mult)
-        if(mult == reverseMult){
-            let toNumMult = parseInt(mult)
-            if(!arr.includes(toNumMult)){
-                arr.push(toNumMult)
+    while (x < number) {
+        x++;
+        while (y < number) {
+            y++;
+            const mult = (x * y).toString();
+            const reverseMult = reverseString(mult);
+            if (mult == reverseMult) {
+                const toNumMult = Number(mult);
+                if(toNumMult > higher){
+                    higher = toNumMult;
+                }
             }
         }
+        y = a;
     }
-    i2 = 99
+
+    return higher;
 }
 
-let ascendingArr = arr.sort(function(a, b){return a-b});
-
-const lastElement = (ascendingArr.length) - 1
-
-console.log(ascendingArr[lastElement])
+misc.answer(findHigherPalindromeUntil(999));

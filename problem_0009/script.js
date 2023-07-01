@@ -1,20 +1,29 @@
-let a = 1;
-let b = 1;
-let foundSolution = true
-const max = 1000;
+import misc from "../misc/misc.js";
 
 
-while (a < max && foundSolution) {
-    a++;
-    b = a;
-    while (b < max) {
-        b++;
-        if (Math.sqrt(a ** 2 + b ** 2) == max - (a + b)) {
-            console.log((max - (a + b)) * a * b);
-            foundSolution = false
+function findProductOfTriplet(range) {
+    let x = 1;
+    let y = 1;
+    let foundSolution = true;
+    let answer;
+
+
+    while (x < range && foundSolution) {
+        x++;
+        y = x;
+        while (y < range) {
+            y++;
+            if (Math.sqrt(x ** 2 + y ** 2) == range - (x + y)) {
+                answer = (range - (x + y)) * x * y;
+                foundSolution = false;
+            }
         }
     }
+
+    return answer;
 }
+
+misc.answer(findProductOfTriplet(1000));
 
 // let c = 1
 

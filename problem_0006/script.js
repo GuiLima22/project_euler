@@ -1,11 +1,18 @@
-let iteration = 0
-let squareSums = 0
-let squareOfSum = 0
+import misc from "../misc/misc.js"
 
-while (iteration < 100){
-    iteration++
-    squareSums  += iteration**2
-    squareOfSum += iteration
+
+function subsBetweenSquares(range) {
+    let i = 0;
+    let squareSums = 0;
+    let squareOfSum = 0;
+
+    while (i < range) {
+        i++;
+        squareSums += i ** 2;
+        squareOfSum += i;
+    }
+
+    return squareOfSum ** 2 - squareSums;
 }
 
-console.log(squareOfSum**2 - squareSums)
+misc.answer(subsBetweenSquares(100));

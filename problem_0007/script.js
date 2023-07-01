@@ -1,10 +1,8 @@
-function rndSqrt(number) {
-    return Math.round(Math.sqrt(number));
-}
+import misc from "../misc/misc.js";
 
 function calcFactors(number) {
     let i = 0;
-    const numSqrt = rndSqrt(number);
+    const numSqrt = misc.rndSqrt(number);
     const arr = [];
 
     while (i < numSqrt) {
@@ -14,7 +12,7 @@ function calcFactors(number) {
             const factor2 = number / i;
 
             if(factor1 == factor2){
-                arr.push(factor1)
+                arr.push(factor1);
             }else{
                  arr.push(factor1, factor2);
             }
@@ -38,7 +36,7 @@ function calcPrimeOfPosition(number) {
 
     const lastNum = primeNumArr.length - 1;
 
-    return console.log(primeNumArr[lastNum]);
+    return primeNumArr[lastNum];
 }
 
-calcPrimeOfPosition(6);
+misc.answer(calcPrimeOfPosition(10001));

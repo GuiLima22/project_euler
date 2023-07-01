@@ -1,5 +1,0 @@
-All factors of a number can be found dividing the number itself by all integer until your sqroot, because sqroot x sqroot = number. Which means that number / sqroot = sqroot
-
-Can a prime factor be higher then the sqroot of another number?
-
-R: Yes. The sqroot of 6 is ~2.45, 3 is a prime factor of 6, 3 > ~2.45
